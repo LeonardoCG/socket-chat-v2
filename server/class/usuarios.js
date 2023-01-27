@@ -1,13 +1,13 @@
 
 
 
-class Usuario  {
+class Usuarios  {
     //inicializar en el constructor el arreglo de personas
     constructor() {
          this.personas = [];
     }
     //metodos
-    agregarPersona(id, persona) {
+    agregarPersona(id, nombre) {
 
         let persona = {
             id, 
