@@ -29,12 +29,7 @@ socket.on('disconnect', function() {
 
 
 // Enviar información
-socket.emit('enviarMensaje', {
-    usuario: 'Leonardo',
-    mensaje: 'Hola Mundo'
-}, (resp) => {
-    console.log('respuesta server: ', resp);
-});
+ 
 
 // Escuchar información
 socket.on('crearMensaje', (mensaje) => {
@@ -47,3 +42,10 @@ socket.on('crearMensaje', (mensaje) => {
 socket.on('listaPersonas', (lista) => {
     console.log(lista);
 })
+
+//mensaje privado accion de escuchar del cliente
+
+socket.on('mensajePrivado', ( mensaje ) => {
+
+    console.log('Mensaje Privados', mensaje);
+});
